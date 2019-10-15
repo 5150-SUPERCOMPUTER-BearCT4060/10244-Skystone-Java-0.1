@@ -67,8 +67,8 @@ public class MainDriveTeleOp_NoCoasting extends OpMode {
 
     //Servos
     //   private Servo colorArm = null;
-    private Servo lHand_servo = null;
-    private Servo rHand_servo = null;
+    private Servo claw_1 = null;
+    private Servo claw_2 = null;
 
     private Double LeftValue ;
     private Double RightValue;
@@ -93,8 +93,8 @@ public class MainDriveTeleOp_NoCoasting extends OpMode {
         elbow_mtr = hardwareMap.get(DcMotor.class, "elbow_mtr");
 
         //Servos
-        rHand_servo = hardwareMap.get(Servo.class, "rHand_servo");
-        lHand_servo = hardwareMap.get(Servo.class, "lHand_servo");
+        claw_1 = hardwareMap.get(Servo.class, "claw_1");
+        claw_2 = hardwareMap.get(Servo.class, "claw_2");
 
         // Most robots need the motor on one side to be reversed to drive forward
         // Reverse the motor that runs backwards when connected directly to the battery
@@ -179,9 +179,9 @@ public class MainDriveTeleOp_NoCoasting extends OpMode {
         } else if (gamepad2.y) {
             //lHand.setPosition(1.0);
         } else if (gamepad2.a) {
-            lHand_servo.setPosition(0);
+            claw_1.setPosition(0);
         } else if (gamepad2.b) {
-            lHand_servo.setPosition(1);
+            claw_2.setPosition(1);
         }
 
 
@@ -189,9 +189,9 @@ public class MainDriveTeleOp_NoCoasting extends OpMode {
          if (gamepad2.y) {
         //rHand.setPosition(1.0);
         } else if (gamepad2.a) {
-        rHand_servo.setPosition(0);
+        claw_1.setPosition(0);
         } else if (gamepad2.b) {
-        rHand_servo.setPosition(1);
+        claw_2.setPosition(1);
         }
 
         // Send calculated power to wheels
