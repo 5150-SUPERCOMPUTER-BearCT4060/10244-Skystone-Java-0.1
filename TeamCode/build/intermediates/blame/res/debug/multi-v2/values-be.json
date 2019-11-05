@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "/home/evan/Desktop/FTC/FTC Java 2019 - 2020 SkyStone/Testing_NO_GIT/Test_1/TeamCode/build/intermediates/incremental/mergeDebugResources/merged.dir/values-be/values-be.xml",
+            "outputFile": "C:\\Users\\Jibo1\\Desktop\\FTC\\Manged_Repos_Git\\10244-Skystone-Java-0.1\\TeamCode\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-be\\values-be.xml",
             "map": [
                 {
-                    "source": "/home/evan/.gradle/caches/transforms-2/files-2.1/aeb65ef8ec0cff8496164beb3e094f62/res/values-be/values-be.xml",
+                    "source": "C:\\Users\\Jibo1\\.gradle\\caches\\transforms-2\\files-2.1\\050e6972469873b9a4c4db2ed3bfe9ea\\res\\values-be\\values-be.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",

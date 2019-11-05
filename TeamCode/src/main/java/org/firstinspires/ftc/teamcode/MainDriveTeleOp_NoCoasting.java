@@ -32,6 +32,7 @@ package org.firstinspires.ftc.teamcode;
 import com.qualcomm.robotcore.eventloop.opmode.OpMode;
 import com.qualcomm.robotcore.eventloop.opmode.TeleOp;
 import com.qualcomm.robotcore.hardware.DcMotor;
+import com.qualcomm.robotcore.hardware.Servo;
 import com.qualcomm.robotcore.util.ElapsedTime;
 import com.qualcomm.robotcore.util.Range;
 
@@ -59,8 +60,8 @@ public class MainDriveTeleOp_NoCoasting extends OpMode {
 
     //Motors
     private ElapsedTime runtime = new ElapsedTime();
-    private DcMotor leftDrive = null;
-    private DcMotor rightDrive = null;
+    private DcMotor left_mtr = null;
+    private DcMotor right_mtr = null;
     private DcMotor r_lift = null;
     private DcMotor l_lift = null;
     private DcMotor intake_mtr = null;
@@ -68,14 +69,17 @@ public class MainDriveTeleOp_NoCoasting extends OpMode {
     //Servos
     //   private Servo colorArm = null;
 
+    private Servo claw_1 = null ;
+    private Servo claw_2 = null ;
+
     private Double LeftValue;
     private Double RightValue;
 
-    private float leftPos = leftDrive.getCurrentPosition();
-    private float rightPos = rightDrive.getCurrentPosition();
+    /*private float leftPos = left_mtr.getCurrentPosition();
+    private float rightPos = right_mtr.getCurrentPosition();
     private float IntakePos = intake_mtr.getCurrentPosition();
     private float LliftPos = r_lift.getCurrentPosition();
-    private float RliftPos = l_lift.getCurrentPosition();
+    private float RliftPos = l_lift.getCurrentPosition(); */
 
     public void init() {
         telemetry.addData("Status", "Initialized");
@@ -86,39 +90,44 @@ public class MainDriveTeleOp_NoCoasting extends OpMode {
         // step (using the FTC Robot Controller app on the phone).
 
         //Motors
-        leftDrive = hardwareMap.get(DcMotor.class, "leftDrive");
-        rightDrive = hardwareMap.get(DcMotor.class, "rightDrive");
+        left_mtr = hardwareMap.get(DcMotor.class, "left_mtr");
+        right_mtr = hardwareMap.get(DcMotor.class, "right_mtr");
         r_lift = hardwareMap.get(DcMotor.class, "r_lift");
         l_lift = hardwareMap.get(DcMotor.class, "l_lift");
         intake_mtr = hardwareMap.get(DcMotor.class, "intake_mtr");
+
         //Servos
+
+        claw_1 = hardwareMap.get(Servo.class, "claw_1") ;
+        claw_2 = hardwareMap.get(Servo.class, "claw_2") ;
 
         // Most robots need the motor on one side to be reversed to drive forward
         // Reverse the motor that runs backwards when connected directly to the battery
-        leftDrive.setDirection(DcMotor.Direction.FORWARD);
-        rightDrive.setDirection(DcMotor.Direction.REVERSE);
-        r_lift.setDirection(DcMotor.Direction.FORWARD);
+        left_mtr.setDirection(DcMotor.Direction.FORWARD);
+        right_mtr.setDirection(DcMotor.Direction.FORWARD);
+        r_lift.setDirection(DcMotor.Direction.REVERSE);
         l_lift.setDirection(DcMotor.Direction.FORWARD);
+        intake_mtr.setDirection(DcMotor.Direction.FORWARD);
 
-        leftDrive.setZeroPowerBehavior(DcMotor.ZeroPowerBehavior.BRAKE);
-        rightDrive.setZeroPowerBehavior(DcMotor.ZeroPowerBehavior.BRAKE);
+        left_mtr.setZeroPowerBehavior(DcMotor.ZeroPowerBehavior.BRAKE);
+        right_mtr.setZeroPowerBehavior(DcMotor.ZeroPowerBehavior.BRAKE);
         r_lift.setZeroPowerBehavior(DcMotor.ZeroPowerBehavior.BRAKE);
         l_lift.setZeroPowerBehavior(DcMotor.ZeroPowerBehavior.BRAKE);
         intake_mtr.setZeroPowerBehavior(DcMotor.ZeroPowerBehavior.BRAKE);
 
-        leftDrive.setMode(DcMotor.RunMode.RUN_USING_ENCODER);
-        rightDrive.setMode(DcMotor.RunMode.RUN_USING_ENCODER);
+        left_mtr.setMode(DcMotor.RunMode.RUN_USING_ENCODER);
+        right_mtr.setMode(DcMotor.RunMode.RUN_USING_ENCODER);
         r_lift.setMode(DcMotor.RunMode.RUN_USING_ENCODER);
         l_lift.setMode(DcMotor.RunMode.RUN_USING_ENCODER);
         intake_mtr.setMode(DcMotor.RunMode.RUN_USING_ENCODER);
 
-        leftDrive.setPower(0);
-        rightDrive.setPower(0);
+        left_mtr.setPower(0);
+        right_mtr.setPower(0);
         r_lift.setPower(0);
         l_lift.setPower(0);
-
         intake_mtr.setPower(0);
-
+        claw_1.setPosition(0) ;
+        claw_2.setPosition(0) ;
 
         // Wait for the game to start (driver presses PLAY)
         runtime.reset();
@@ -132,22 +141,22 @@ public class MainDriveTeleOp_NoCoasting extends OpMode {
         double rightPower;
 
         //Motors
-        double drive = gamepad1.left_stick_y;
-        double turn = -gamepad1.right_stick_x;
-        leftPower = Range.clip(drive + turn, -1, 1);
-        rightPower = Range.clip(drive - turn, -1, 1);
+        double drive = gamepad1.left_stick_x;
+        double turn = gamepad1.left_stick_y;
+        leftPower = Range.clip(-drive - turn, -1, 1);
+        rightPower = Range.clip(-drive + turn, -1, 1);
 
-        if (gamepad1.left_stick_y < 0.1 || gamepad1.left_stick_y > -0.1) {
 
-        } else if (!gamepad1.dpad_down || !gamepad1.dpad_up) {
+
+         if (!gamepad1.a || !gamepad1.b) {
             intake_mtr.setPower(0);
 
-            if (gamepad1.dpad_down) {
-                intake_mtr.setPower(1);
+            if (gamepad1.a) {
+                intake_mtr.setPower(0.5);
             }
 
-            if (gamepad1.dpad_up) {
-                intake_mtr.setPower(-1);
+            if (gamepad1.b) {
+                intake_mtr.setPower(-0.5);
             }
             if (gamepad1.left_bumper) {
                 r_lift.setPower(-0.5);
@@ -165,25 +174,34 @@ public class MainDriveTeleOp_NoCoasting extends OpMode {
             LeftValue = 0.0;
             RightValue = 0.0;
 
+              if (gamepad1.x) {
 
-            if (gamepad1.x) {
+                  claw_1.setPosition(1);
+                  claw_2.setPosition(1);
+              }
+             if (gamepad1.y) {
+
+                 claw_1.setPosition(0);
+                 claw_2.setPosition(0);
+             }
+
 
                 // Send calculated power to wheels
-                leftDrive.setPower(leftPower);
-                rightDrive.setPower(rightPower);
+                left_mtr.setPower(leftPower);
+                right_mtr.setPower(rightPower);
 
 
                 // Show the elapsed game time and wheel power.
-                telemetry.addData("Status", "Run Time: " + runtime.toString());
+               /* telemetry.addData("Status", "Run Time: " + runtime.toString());
                 telemetry.addData("Motors", "left (%.2f), right (%.2f)", leftPower, rightPower);
                 telemetry.addData("Left POS", "(%.2f)", leftPos);
                 telemetry.addData("Right POS", "(%.2f)", rightPos);
                 telemetry.addData("Lift POS", "(%.2f)", LliftPos);
                 telemetry.addData("Arm  POS", "(%.2f)", RliftPos);
-                telemetry.addData("Arm  POS", "(%.2f)", IntakePos);
+                telemetry.addData("Arm  POS", "(%.2f)", IntakePos);*/
 
                 telemetry.update();
-            }
+
 
 
         }
@@ -194,12 +212,13 @@ public class MainDriveTeleOp_NoCoasting extends OpMode {
 
 
 
-        leftDrive.setPower(0);
-        rightDrive.setPower(0);
+        left_mtr.setPower(0);
+        right_mtr.setPower(0);
         r_lift.setPower(0);
         l_lift.setPower(0);
         intake_mtr.setPower(0);
-
+        claw_1.setPosition(0) ;
+        claw_2.setPosition(0) ;
 
     }
 }

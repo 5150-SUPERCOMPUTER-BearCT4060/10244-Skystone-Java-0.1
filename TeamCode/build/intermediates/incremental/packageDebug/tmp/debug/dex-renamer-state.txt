@@ -1,4 +1,4 @@
-#Tue Sep 24 16:36:30 PDT 2019
-base.0=/home/evan/Desktop/FTC/FTC Java 2019 - 2020 SkyStone/Testing_NO_GIT/Test_1/TeamCode/build/intermediates/dex/debug/mergeDexDebug/out
+#Sat Nov 02 14:26:44 PDT 2019
+base.0=C\:\\Users\\Jibo1\\Desktop\\FTC\\Manged_Repos_Git\\10244-Skystone-Java-0.1\\TeamCode\\build\\intermediates\\dex\\debug\\mergeDexDebug\\out
 path.0=classes.dex
 renamed.0=classes.dex

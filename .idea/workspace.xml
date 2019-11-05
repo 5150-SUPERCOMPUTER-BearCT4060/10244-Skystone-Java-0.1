@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c003d26b-e5c6-4df2-824a-1bbacf309edf" name="Default Changelist" comment="" />
+    <list default="true" id="5a664f97-062e-4d40-abf2-7a27a13b7253" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -9,45 +9,37 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="DefaultGradleProjectSettings">
-    <option name="isMigrated" value="true" />
+    <option name="testRunner" value="GRADLE" />
+    <option name="delegatedBuild" value="true" />
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="Nexus_5X_API_29_x86" />
-  <component name="ExternalProjectsManager">
-    <system id="GRADLE">
-      <state>
-        <projects_view />
-      </state>
-    </system>
-  </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+    <leaf>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/TeamCode/src/main/java/org/firstinspires/ftc/teamcode/MainDriveTeleOp_NoCoasting.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1647">
-              <caret line="80" column="51" lean-forward="true" selection-start-line="80" selection-start-column="51" selection-end-line="80" selection-end-column="51" />
+            <state relative-caret-position="321">
+              <caret line="158" column="40" selection-start-line="158" selection-start-column="40" selection-end-line="158" selection-end-column="40" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/TeamCode/src/main/java/org/firstinspires/ftc/teamcode/Autonomous_Mode.java">
+        <entry file="file://$PROJECT_DIR$/TeamCode/src/main/java/org/firstinspires/ftc/teamcode/Autonomous_BuildSide.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1279">
-              <caret line="67" column="39" lean-forward="true" selection-start-line="67" selection-start-column="39" selection-end-line="67" selection-end-column="39" />
+            <state relative-caret-position="277">
+              <caret line="203" column="25" selection-start-line="203" selection-start-column="25" selection-end-line="203" selection-end-column="25" />
               <folding>
-                <element signature="e#5800#5801#0" expanded="true" />
-                <element signature="e#5842#5843#0" expanded="true" />
-                <element signature="e#5889#5890#0" expanded="true" />
-                <element signature="e#5931#5932#0" expanded="true" />
-                <element signature="e#6115#6116#0" expanded="true" />
-                <element signature="e#6158#6159#0" expanded="true" />
-                <element signature="e#6196#6197#0" expanded="true" />
-                <element signature="e#6239#6240#0" expanded="true" />
-                <element signature="e#6282#6283#0" expanded="true" />
-                <element signature="e#6316#6317#0" expanded="true" />
-                <element signature="e#6362#6363#0" expanded="true" />
-                <element signature="e#6396#6397#0" expanded="true" />
+                <element signature="e#7922#7923#0" expanded="true" />
+                <element signature="e#7963#7964#0" expanded="true" />
+                <element signature="e#8197#8198#0" expanded="true" />
+                <element signature="e#8239#8240#0" expanded="true" />
+                <element signature="e#8830#8831#0" expanded="true" />
+                <element signature="e#8873#8874#0" expanded="true" />
+                <element signature="e#9090#9091#0" expanded="true" />
+                <element signature="e#9133#9134#0" expanded="true" />
+                <element signature="e#9555#9556#0" expanded="true" />
+                <element signature="e#9589#9590#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -62,7 +54,7 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/TeamCode/src/main/java/org/firstinspires/ftc/teamcode/MainDriveTeleOp_NoCoasting.java" />
-        <option value="$PROJECT_DIR$/TeamCode/src/main/java/org/firstinspires/ftc/teamcode/Autonomous_Mode.java" />
+        <option value="$PROJECT_DIR$/TeamCode/src/main/java/org/firstinspires/ftc/teamcode/Autonomous_BuildSide.java" />
       </list>
     </option>
   </component>
@@ -77,42 +69,16 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
-      <pane id="AndroidView">
-        <subPane>
-          <expand>
-            <path>
-              <item name="10244-Skystone-Java-0.1" type="1abcf292:AndroidViewProjectNode" />
-              <item name="TeamCode" type="feadf853:AndroidModuleNode" />
-            </path>
-            <path>
-              <item name="10244-Skystone-Java-0.1" type="1abcf292:AndroidViewProjectNode" />
-              <item name="TeamCode" type="feadf853:AndroidModuleNode" />
-              <item name="java" type="edd41e36:AndroidSourceTypeNode" />
-            </path>
-            <path>
-              <item name="10244-Skystone-Java-0.1" type="1abcf292:AndroidViewProjectNode" />
-              <item name="TeamCode" type="feadf853:AndroidModuleNode" />
-              <item name="java" type="edd41e36:AndroidSourceTypeNode" />
-              <item name="teamcode" type="cbb59c9e:AndroidPsiDirectoryNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
       <pane id="PackagesPane" />
+      <pane id="AndroidView" />
       <pane id="ProjectPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="android.sdk.path" value="$USER_HOME$/AppData/Local/Android/Sdk" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-  </component>
-  <component name="RecentsManager">
-    <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="org.firstinspires.ftc.teamcode" />
-    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -193,11 +159,11 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="c003d26b-e5c6-4df2-824a-1bbacf309edf" name="Default Changelist" comment="" />
-      <created>1569547296564</created>
+      <changelist id="5a664f97-062e-4d40-abf2-7a27a13b7253" name="Default Changelist" comment="" />
+      <created>1572661777755</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1569547296564</updated>
+      <updated>1572661777755</updated>
     </task>
     <servers />
   </component>
@@ -205,58 +171,54 @@
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
+      <window_info content_ui="combo" id="Project" weight="0.32980332" />
+      <window_info id="Structure" side_tool="true" />
+      <window_info id="Build Variants" side_tool="true" />
+      <window_info id="Image Layers" />
+      <window_info id="Designer" />
+      <window_info id="Capture Tool" />
+      <window_info id="Resources Explorer" />
+      <window_info id="Favorites" side_tool="true" />
       <window_info id="Captures" order="0" side_tool="true" weight="0.25" />
-      <window_info id="Capture Tool" order="1" />
-      <window_info content_ui="combo" id="Project" order="2" visible="true" weight="0.15506808" />
-      <window_info id="Structure" order="3" side_tool="true" />
-      <window_info id="Favorites" order="4" side_tool="true" />
-      <window_info id="Build Variants" order="5" side_tool="true" />
-      <window_info id="Image Layers" order="6" />
-      <window_info id="Designer" order="7" />
-      <window_info id="Resources Explorer" order="8" />
-      <window_info anchor="bottom" id="Logcat" order="0" />
-      <window_info anchor="bottom" id="TODO" order="1" />
-      <window_info anchor="bottom" id="Terminal" order="2" />
-      <window_info anchor="bottom" id="Event Log" order="3" side_tool="true" />
-      <window_info anchor="bottom" id="Version Control" order="4" />
-      <window_info anchor="bottom" id="Build" order="5" weight="0.111292966" />
-      <window_info anchor="bottom" id="Android Profiler" order="6" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Run" order="7" />
-      <window_info anchor="bottom" id="Debug" order="8" />
-      <window_info anchor="bottom" id="Find" order="9" weight="0.3289689" />
-      <window_info anchor="right" id="Capture Analysis" order="0" />
-      <window_info anchor="right" id="Gradle" order="1" />
-      <window_info anchor="right" id="Theme Preview" order="2" />
-      <window_info anchor="right" id="Palette&#9;" order="3" />
-      <window_info anchor="right" id="Assistant" order="4" visible="true" weight="0.3207262" />
-      <window_info anchor="right" id="Device File Explorer" order="5" side_tool="true" weight="0.32980332" />
+      <window_info anchor="bottom" id="Run" />
+      <window_info anchor="bottom" id="Logcat" />
+      <window_info anchor="bottom" id="Version Control" />
+      <window_info anchor="bottom" id="TODO" />
+      <window_info anchor="bottom" id="Android Profiler" />
+      <window_info anchor="bottom" id="Debug" />
+      <window_info anchor="bottom" id="Terminal" />
+      <window_info anchor="bottom" id="Event Log" side_tool="true" />
+      <window_info active="true" anchor="bottom" id="Build" visible="true" weight="0.3289689" />
+      <window_info anchor="right" id="Device File Explorer" side_tool="true" />
+      <window_info anchor="right" id="Capture Analysis" />
+      <window_info anchor="right" id="Gradle" />
+      <window_info anchor="right" id="Theme Preview" />
+      <window_info anchor="right" id="Palette&#9;" />
     </layout>
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/TeamCode/src/main/java/org/firstinspires/ftc/teamcode/MainDriveTeleOp_NoCoasting.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1647">
-          <caret line="80" column="51" lean-forward="true" selection-start-line="80" selection-start-column="51" selection-end-line="80" selection-end-column="51" />
+        <state relative-caret-position="321">
+          <caret line="158" column="40" selection-start-line="158" selection-start-column="40" selection-end-line="158" selection-end-column="40" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/TeamCode/src/main/java/org/firstinspires/ftc/teamcode/Autonomous_Mode.java">
+    <entry file="file://$PROJECT_DIR$/TeamCode/src/main/java/org/firstinspires/ftc/teamcode/Autonomous_BuildSide.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1279">
-          <caret line="67" column="39" lean-forward="true" selection-start-line="67" selection-start-column="39" selection-end-line="67" selection-end-column="39" />
+        <state relative-caret-position="277">
+          <caret line="203" column="25" selection-start-line="203" selection-start-column="25" selection-end-line="203" selection-end-column="25" />
           <folding>
-            <element signature="e#5800#5801#0" expanded="true" />
-            <element signature="e#5842#5843#0" expanded="true" />
-            <element signature="e#5889#5890#0" expanded="true" />
-            <element signature="e#5931#5932#0" expanded="true" />
-            <element signature="e#6115#6116#0" expanded="true" />
-            <element signature="e#6158#6159#0" expanded="true" />
-            <element signature="e#6196#6197#0" expanded="true" />
-            <element signature="e#6239#6240#0" expanded="true" />
-            <element signature="e#6282#6283#0" expanded="true" />
-            <element signature="e#6316#6317#0" expanded="true" />
-            <element signature="e#6362#6363#0" expanded="true" />
-            <element signature="e#6396#6397#0" expanded="true" />
+            <element signature="e#7922#7923#0" expanded="true" />
+            <element signature="e#7963#7964#0" expanded="true" />
+            <element signature="e#8197#8198#0" expanded="true" />
+            <element signature="e#8239#8240#0" expanded="true" />
+            <element signature="e#8830#8831#0" expanded="true" />
+            <element signature="e#8873#8874#0" expanded="true" />
+            <element signature="e#9090#9091#0" expanded="true" />
+            <element signature="e#9133#9134#0" expanded="true" />
+            <element signature="e#9555#9556#0" expanded="true" />
+            <element signature="e#9589#9590#0" expanded="true" />
           </folding>
         </state>
       </provider>
